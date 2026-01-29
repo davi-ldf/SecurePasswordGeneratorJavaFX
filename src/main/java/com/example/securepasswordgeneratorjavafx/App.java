@@ -1,6 +1,7 @@
 package com.example.securepasswordgeneratorjavafx;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
@@ -29,7 +30,15 @@ public class App extends Application {
             generatedPasswordField.setText(password); // Shows generated password to the user
         });
 
+        generatedPasswordField.setStyle("-fx-text-fill: cyan; -fx-background-color: black");
+        passwordLengthLabel.setStyle("-fx-text-fill: white; -fx-font-weight: bold");
+        generatedPasswordLabel.setStyle("-fx-text-fill: white; -fx-font-weight: bold");
+        generateButton.setStyle("-fx-text-fill: white; -fx-background-color: #3574F0;");
+
         VBox vbox = new VBox(passwordLengthLabel, passwordLengthField, generateButton, generatedPasswordLabel, generatedPasswordField);
+        vbox.setSpacing(10);
+        vbox.setPadding(new Insets(10));
+        vbox.setStyle("-fx-background-color: #2B2D30");
         Scene scene = new Scene(vbox, 250, 200);
         stage.setScene(scene);
         stage.show();
