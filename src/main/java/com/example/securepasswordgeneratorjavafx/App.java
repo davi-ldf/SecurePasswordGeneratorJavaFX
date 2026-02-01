@@ -40,7 +40,7 @@ public class App extends Application {
         vbox.setSpacing(10);
         vbox.setPadding(new Insets(10));
         vbox.setStyle("-fx-background-color: #2B2D30");
-        Scene scene = new Scene(vbox, 250, 200);
+        Scene scene = new Scene(vbox, 300, 200);
         stage.setScene(scene);
         stage.show();
 
